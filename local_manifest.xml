@@ -1,62 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
-    <remote name="Ll0ir"
-        fetch="https://github.com/Ll0ir/"/>
 
-    <project name="android_vendor_htc_primou"
-        path="vendor/htc/primou"
-        revision="JB-TESTING"
-        remote="Ll0ir" />
+    <remote name="maxwen"
+        fetch="https://github.com/maxwen/"/>
 
-    <project name="primou"
-        path="device/htc/primou"
-        revision="jb-testing"
-        remote="Ll0ir" />
-
-    <project name="android_vendor_qcom_proprietary"
-        path="vendor/qcom/proprietary"
-        revision="jellybean"
-        remote="Ll0ir" />
-
-    <project name="msm7x30-common"
-        path="device/htc/msm7x30-common"
-        revision="jb"
-        remote="Ll0ir" />
-
-    <remove-project name="CyanogenMod/android_packages_apps_Phone" path="packages/apps/Phone"/>
-
-    <project path="packages/apps/Phone"
-        remote="Ll0ir"
-        revision="jellybean"
-        name="android_packages_apps_Phone"/>
+    <remove-project path="frameworks/native" name="CyanogenMod/android_frameworks_native" />
+    <project path="frameworks/native" 
+        remote="maxwen"
+        revision="refs/heads/jellybean"
+        name="native" />
 
     <remove-project name="CyanogenMod/android_frameworks_base" path="frameworks/base"/>
     <project path="frameworks/base"
-        remote="Ll0ir"
-        revision="jellybean"
-        name="base"/>
+       remote="maxwen"
+       revision="refs/heads/jellybean"
+       name="android_frameworks_base"/>
 
-    <remove-project name="CyanogenMod/android_frameworks_native" path="frameworks/native"/>
-    <project path="frameworks/native"
-        remote="Ll0ir"
-        revision="jellybean"
-        name="native"/>
-
-    <remove-project name="CyanogenMod/android_packages_apps_Settings" path="packages/apps/Settings"/>
-    <project path="packages/apps/Settings"
-        remote="Ll0ir"
-        revision="jellybean"
-        name="Settings"/>
+    <remove-project name="CyanogenMod/android_frameworks_av" path="frameworks/av"/>
+    <project path="frameworks/av"
+       remote="maxwen"
+       revision="refs/heads/jellybean"
+       name="android_frameworks_av"/>
 
     <remove-project name="CyanogenMod/android_hardware_qcom_display" path="hardware/qcom/display"/>
-    <project path="hardware/qcom/display"
-        remote="Ll0ir"
-        revision="jellybean"
-        name="hardware_qcom_display"/>
+    <project path="hardware/qcom/display" 
+        remote="maxwen"
+        revision="refs/heads/jellybean"
+        name="hardware_qcom_display" />
 
     <remove-project name="CyanogenMod/android_hardware_qcom_audio" path="hardware/qcom/audio"/>
     <project path="hardware/qcom/audio"
-        remote="Ll0ir"
-        revision="jellybean"
+        remote="maxwen"
+        revision="refs/heads/jellybean"
         name="android_hardware_qcom_audio"/>
-</manifest>
+
+    <remove-project name="CyanogenMod/android_hardware_qcom_media" path="hardware/qcom/media"/>
+    <project path="hardware/qcom/media"
+        remote="maxwen"
+        revision="refs/heads/jellybean"
+        name="android_hardware_qcom_media"/>
+
+    <remove-project name="CyanogenMod/android_packages_apps_Settings" path="packages/apps/Settings"/>
+    <project path="packages/apps/Settings" 
+        remote="maxwen"
+        revision="refs/heads/jellybean"
+        name="android_packages_apps_Settings" />
+
+    <remove-project name="CyanogenMod/android_packages_apps_Camera" path="packages/apps/Camera"/>
+    <project path="packages/apps/Camera"
+       remote="maxwen"
+       revision="refs/heads/jellybean"
+       name="android_packages_apps_Camera"/>
+
+    <remove-project name="CyanogenMod/android_packages_apps_LegacyCamera" path="packages/apps/LegacyCamera"/>
+    <project path="packages/apps/LegacyCamera"
+       remote="maxwen"
+       revision="refs/heads/jellybean"
+       name="android_packages_apps_LegacyCamera"/>
+
+    <project name="primou" 
+        path="device/htc/primou" 
+        remote="maxwen" 
+        revision="refs/heads/jellybean"/>
+
+    <project name="msm7x30-common" 
+        path="device/htc/msm7x30-common" 
+        remote="maxwen"
+        revision="refs/heads/jellybean"/>
+
+    <project name="android_vendor_htc_primou" 
+        path="vendor/htc/primou" 
+        remote="maxwen" 
+        revision="refs/heads/jellybean"/>
+
+    <project name="HwaSettings" 
+        path="packages/apps/HwaSettings" 
+        remote="maxwen"
+        revision="refs/heads/jellybean"/>
+
+  </manifest>
